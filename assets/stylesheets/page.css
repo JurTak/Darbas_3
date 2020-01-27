@@ -1,0 +1,93 @@
+.noselect{ /* Can't select text */
+	-webkit-touch-callout: none;	/* iOS Safari */
+	-webkit-user-select: none;		/* Safari */
+	-khtml-user-select: none;		/* Konqueror HTML */
+	-moz-user-select: none;			/* Firefox */
+	-ms-user-select: none;			/* Internet Explorer/Edge */
+	user-select: none;				/* Non-prefixed version, currently
+										supported by Chrome and Opera */
+}
+*{
+	font-family: arial, helvetica, sans-serif;
+}
+footer{
+	font-style: italic;
+}
+
+#page{
+	margin: 2% auto 2%;
+	padding: 8px;
+	max-width: 1200px;
+	display: flex;
+	flex-flow: row wrap;
+}
+#menu{
+	/*background-color: burlywood;*/
+	width: 220px;
+}
+#content{
+	/*background-color: bisque;*/
+	min-width: 640px;
+	flex: 1;
+	padding: inherit;
+	text-align: center;
+}
+#rightside{
+	/*background-color: beige;*/
+	min-width: 300px;
+	flex: 1;
+	padding: inherit;
+}
+
+@media screen and (max-width: 700px){
+	#content{
+		min-width: 600px;
+	}
+}
+@media screen and (max-width: 650px){
+	#page{
+		flex-flow: column wrap;
+	}
+	#content,#rightside{
+		padding: 8px 0;
+		min-width: 0;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 740px){
+	#menu{
+		min-width: 0;
+		width: 100%;
+	}
+}
+/***********************************/
+
+#schema{
+	background-color: #5984e5;
+	color: white;
+	max-width: 600px;
+}
+#schema div{
+	padding: 10px;
+}
+#schema-c{
+	background-color: #7c7b78;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+}
+#schema-c div{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+#schema-c div div{
+	background-color: #5984e5;
+	color: white;
+	border: 1px solid #FFF;
+	margin: 0 10px;
+	padding: 10px;
+	flex: 1;
+	height: 300px;
+	line-height: 300px;
+}
+

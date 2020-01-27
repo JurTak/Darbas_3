@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVS</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" media="screen" href="assets/stylesheets/contacts.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/gallery.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/header.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/login.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/main.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/menu.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/newjob.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/page.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/rightside.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/options.css" />
+<script type="text/javascript" src="assets/javascripts/application.js"></script>
+</head>
+<body>
+<header onmouseleave="out_menu(0)">
+	<div class="logo noselect">
+		<h1>SVS</h1>
+		<h2>System</h2>
+	</div>
+	
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(2)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id1" />
+			<div>
+				Jurij Takun
+				<img src="assets/images/user.png" alt="user" height="16px" width="16px">
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a href="options.html">
+						<img src="assets/images/gear.png" alt="logout" height="16px" width="16px">
+						Options
+					</a>
+					<a href="index.html">
+						<img src="assets/images/logout.png" alt="logout" height="16px" width="16px">
+						Log out
+					</a>
+				</div>
+			</div>
+		</label>
+	</div>
+
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(1)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id2" />
+			<div>
+				Language 
+				(EN)
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a onclick="location.reload();">
+						Lietuvių (LT)
+					</a><br>
+					<a onclick="location.reload();">
+						English (EN)
+					</a><br>
+				</div>
+			</div>
+		</label>
+	</div>
+</header>
+
+
+<div id="page">
+
+<div id="menu" class="menu0">
+	<ul>
+		<a href="main.html">
+			<li disabled="false">
+				<div class="noselect">Home</div>
+			</li>
+		</a>
+		<a href="new-job.html">
+			<li disabled="false">
+				<div class="noselect">New Job</div>
+			</li>
+		</a>
+		<a href="gallery.html">
+			<li disabled="false">
+				<div class="noselect">Gallery</div>
+			</li>
+		</a>
+		<a href="contacts.html">
+			<li disabled="false">
+				<div class="noselect">Contacts</div>
+			</li>
+		</a>
+		<a href="schema.html">
+			<li disabled="false">
+				<div class="noselect">Schema</div>
+			</li>
+		</a>
+		<a href="game.html">
+			<li disabled="false">
+				<div class="noselect">Game</div>
+			</li>
+		</a>
+	</ul>
+</div>
+
+<div id="content">
+
+<div id="main-box">
+	<h2>Options</h2>
+	<div class="options-box">
+		<div>
+			<fieldset class="options-group options-mode">
+				<legend>Mode</legend>
+				<div>
+					<div onclick="SetMode(mode.day)">
+						<img src="assets/images/day.png" 
+							 alt="Day" 
+							 height="32px" width="32px" 
+							 title="Day" />
+					</div>
+					<div onclick="SetMode(mode.night)">
+						<img src="assets/images/night0.png" 
+							 alt="Night" 
+							 height="32px" width="32px" 
+							 title="Night" />
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset class="options-group">
+				<legend>Font</legend>
+				<div>
+					<div onclick="SetFont(0)" onkeyup="SetFont(0)">
+						<input type="radio" id="id_a" 
+							   name="font" 
+							   value="arial">
+						<label for="id_a" id="idl_a">Arial</label>
+					</div>
+					<div onclick="SetFont(1)" onkeyup="SetFont(1)">
+						<input type="radio" id="id_pl" 
+							   name="font" 
+							   value="palatino_linotype">
+						<label for="id_pl" id="idl_pl">Palatino Linotype</label>
+					</div>
+					<div onclick="SetFont(2)" onkeyup="SetFont(2)">
+						<input type="radio" id="id_cs" 
+							   name="font" 
+							   value="comic_sans_ms">
+						<label for="id_cs" id="idl_cs">Comic Sans MS</label>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset class="options-group options-color">
+				<legend>Color</legend>
+				<div>
+					<div onclick="SetColor(0)" onkeyup="SetColor(0)">
+						<label>
+							<input type="radio" id="id_color_0"
+								   class="options-color-boxs"
+								   name="color" 
+								   value="">
+							<div>
+								<div id="id_color_a0" class="options-color-a"></div>
+								<div>
+									<div id="id_color_b0" class="options-color-b"></div>
+									<div id="id_color_c0" class="options-color-c"></div>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div onclick="SetColor(1)" onkeyup="SetColor(1)">
+						<label>
+							<input type="radio" id="id_color_1"
+								   class="options-color-boxs"
+								   name="color" 
+								   value="">
+							<div>
+								<div id="id_color_a1" class="options-color-a"></div>
+								<div>
+									<div id="id_color_b1" class="options-color-b"></div>
+									<div id="id_color_c1" class="options-color-c"></div>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div onclick="SetColor(2)" onkeyup="SetColor(2)">
+						<label>
+							<input type="radio" id="id_color_2"
+								   class="options-color-boxs"
+								   name="color" 
+								   value="">
+							<div>
+								<div id="id_color_a2" class="options-color-a"></div>
+								<div>
+									<div id="id_color_b2" class="options-color-b"></div>
+									<div id="id_color_c2" class="options-color-c"></div>
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		
+	</div>
+</div>
+
+</div>
+
+
+</div>
+
+<hr />
+<footer>
+	2019 &copy; SVS
+</footer>
+	
+	<script rel="stylesheet" type="text/javascript" src="assets/javascripts/options.js"></script>
+	
+</body>
+</html>

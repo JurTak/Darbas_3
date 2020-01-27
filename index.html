@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVS</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" media="screen" href="assets/stylesheets/contacts.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/gallery.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/header.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/login.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/main.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/menu.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/newjob.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/page.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/rightside.css" />
+<script type="text/javascript" src="assets/javascripts/application.js"></script>
+</head>
+<body>
+<header onmouseleave="out_menu(0)">
+	<div class="logo noselect">
+		<h1>SVS</h1>
+		<h2>System</h2>
+	</div>
+	
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(1)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id2" />
+			<div>
+				Language 
+				(EN)
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a onclick="location.reload();">
+						Lietuvių (LT)
+					</a><br>
+					<a onclick="location.reload();">
+						English (EN)
+					</a><br>
+				</div>
+			</div>
+		</label>
+	</div>
+</header>
+
+
+<div class="login">
+	<div id="login-title">Login to the system</div>
+	<form action="main.html" method="post">
+		<div>
+			<input type="text" name="name" placeholder="Name">
+			<input type="password" name="pass" placeholder="Password">
+		</div>
+		<input type="submit" value="Login">
+	</form>
+</div>
+</body>
+</html>

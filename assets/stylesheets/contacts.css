@@ -1,0 +1,17 @@
+#contacts{
+	text-align: left;
+	padding-left: 50px;
+}
+
+#contacts img{
+	margin-top: 30px;
+	width: 100%;
+	max-width: 400px;
+	border: 1px solid #aaa;
+}
+
+@media screen and (max-width: 740px){
+	#contacts{
+		padding-left: 0;
+	}
+}

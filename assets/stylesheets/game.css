@@ -1,0 +1,54 @@
+.game-box{
+	text-align: left;
+	padding: 0 20px 0 !important;
+}
+.game-box h3{
+	font-style: italic;
+}
+.game-play{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.game-block{
+	font-size: 42px;
+	margin: 20px;
+}
+
+.game-block input{
+	font-size: inherit;
+	width: 80px;
+}
+
+.game-info{
+	margin: 20px;
+}
+
+.game-info table{
+	border-spacing: 0px;
+	border: 1px solid #aaa;
+	display: block;
+	height: 250px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.game-info table thead tr th{
+	position: sticky;
+	top: 0;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+
+.game-info table tbody tr td{
+	background-color: white;
+	height: 100%;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+
+.game-info table tfoot tr td{
+	color: #000 !important;
+	background-color: #ccc !important;
+}

@@ -1,0 +1,99 @@
+#menu ul a{
+	text-decoration: none;
+}
+#menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#menu ul div{
+	padding: 0 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/*************************************/
+.menu0 ul li[disabled="false"]{
+	background-color: #495762;
+	/*max-width: 220px;*/
+	height: 35px;
+	line-height: 35px;
+	margin: 3px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+	border: 1px solid #444;
+	border-radius: 15px;
+}
+.menu0 ul li[disabled="false"]:hover{
+	background-color: #7197b4;
+	animation: pushmenu .3s linear;
+	transform: translate(5px,0);
+}
+/*************************************/
+.menu1 ul li[disabled="false"]{
+	background-color: #606249;
+	/*max-width: 220px;*/
+	height: 35px;
+	line-height: 35px;
+	margin: 3px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+	border: 1px solid #444;
+	border-radius: 15px;
+}
+.menu1 ul li[disabled="false"]:hover{
+	background-color: #9c9f73;
+	animation: pushmenu .3s linear;
+	transform: translate(5px,0);
+}
+/*************************************/
+.menu2 ul li[disabled="false"]{
+	background-color: #624952;
+	/*max-width: 220px;*/
+	height: 35px;
+	line-height: 35px;
+	margin: 3px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+	border: 1px solid #444;
+	border-radius: 15px;
+}
+.menu2 ul li[disabled="false"]:hover{
+	background-color: #9f7382;
+	animation: pushmenu .3s linear;
+	transform: translate(5px,0);
+}
+
+/************************************/
+#menu ul li[disabled="false"]:active{
+	color: purple;
+}
+
+#menu ul li[disabled="true"]{
+	background-color: #dae2e8;
+	/*max-width: 220px;*/
+	height: 35px;
+	line-height: 35px;
+	margin: 3px;
+	text-align: center;
+	color: #838091;
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	font-weight: bold;
+	font-style: italic;
+	border: 1px solid #9b9b9b;
+	border-radius: 15px;
+	transform: translate(5px,0);
+}
+
+@keyframes pushmenu {
+	0% {
+		transform: translate(0,0);
+	}
+	100% {
+		transform: translate(5px,0);
+	}
+}

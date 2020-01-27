@@ -1,0 +1,19 @@
+.login{
+	margin: 10% auto 0;
+	background-color: #f0f0f0;
+	padding: 0.4em;
+	max-width: 250px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+}
+.login form input,
+#login-title{
+	display: block;
+	margin: 0.4em;
+}
+.login form div input{
+	width: 200px;
+}
+.login form > input{
+	width: 80px;
+}

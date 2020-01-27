@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVS</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" media="screen" href="assets/stylesheets/contacts.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/gallery.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/header.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/login.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/main.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/menu.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/newjob.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/page.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/rightside.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/options.css" />
+<script type="text/javascript" src="assets/javascripts/application.js"></script>
+</head>
+<body>
+<header onmouseleave="out_menu(0)">
+	<div class="logo noselect">
+		<h1>SVS</h1>
+		<h2>System</h2>
+	</div>
+	
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(2)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id1" />
+			<div>
+				Jurij Takun
+				<img src="assets/images/user.png" alt="user" height="16px" width="16px">
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a href="options.html">
+						<img src="assets/images/gear.png" alt="logout" height="16px" width="16px">
+						Options
+					</a>
+					<a href="index.html">
+						<img src="assets/images/logout.png" alt="logout" height="16px" width="16px">
+						Log out
+					</a>
+				</div>
+			</div>
+		</label>
+	</div>
+
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(1)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id2" />
+			<div>
+				Language 
+				(EN)
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a onclick="location.reload();">
+						Lietuvių (LT)
+					</a><br>
+					<a onclick="location.reload();">
+						English (EN)
+					</a><br>
+				</div>
+			</div>
+		</label>
+	</div>
+</header>
+
+
+<div id="page">
+
+<div id="menu" class="menu0">
+	<ul>
+		<a href="main.html">
+			<li disabled="false">
+				<div class="noselect">Home</div>
+			</li>
+		</a>
+		<a href="new-job.html">
+			<li disabled="true">
+				<div class="noselect">New Job</div>
+			</li>
+		</a>
+		<a href="gallery.html">
+			<li disabled="false">
+				<div class="noselect">Gallery</div>
+			</li>
+		</a>
+		<a href="contacts.html">
+			<li disabled="false">
+				<div class="noselect">Contacts</div>
+			</li>
+		</a>
+		<a href="schema.html">
+			<li disabled="false">
+				<div class="noselect">Schema</div>
+			</li>
+		</a>
+		<a href="game.html">
+			<li disabled="false">
+				<div class="noselect">Game</div>
+			</li>
+		</a>
+	</ul>
+</div>
+
+<div id="content">
+	<div id="new-job">
+		<h3>Job registration</h3>
+		<form action="main.html" method="post">
+			<fieldset>
+				<legend>Order Priority</legend>
+				<div>
+					<div></div>
+					<label>
+						<input type="radio" name="priv" value="A"> Not in a hurry
+					</label>
+				</div>
+				<div>
+					<div></div>
+					<label>
+						<input type="radio" name="priv" value="B" checked="true"> Normal
+					</label>
+				</div>
+				<div>
+					<div></div>
+					<label>
+						<input type="radio" name="priv" value="C"> Urgent
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Work in progress</legend>
+				<div>
+					<div>Type:</div>
+					<select name="tipas">
+						<option value="1">Repairs</option>
+						<option value="2">Installation</option>
+						<option value="3">Cleaning</option>
+						<option value="4">Change</option>
+						<option value="5">Mounting</option>
+					</select>
+				</div>
+				<div>
+					<div>Price:</div>
+					<input type="number" step="0.01" name="kaina" min="0">
+				</div>
+				<div id="new-job-textarea-block">
+					<div>Description:</div>
+					<textarea name="aprasas" maxlength="1024"></textarea>
+				</div>
+				<div>
+					<div></div>
+					<label>
+						<input type="checkbox" name="faktura" value="1"> Invoice required
+					</label>
+				</div>
+			</fieldset>
+			
+			<div>
+				<input type="submit" value="OK">
+				<input type="reset" value="Clear">
+			</div>
+		</form>
+	</div>
+</div>
+
+<div id="rightside">
+	<div id="problems-block">
+		<h3>Problems</h3>
+		<table>
+			<tr>
+				<th>Description</th>
+				<th>Time</th>
+				<th>Date</th>
+			</tr>
+			<tr>
+				<td>Programinės ir techninės įrangos visuma, skirta problemų registravimui, stebėjimui ir valdymui.</td>
+				<td>13:50</td>
+				<td>2019/09/11</td>
+			</tr>
+			<tr>
+				<td>Problemų valdymo grupė.</td>
+				<td>16:00</td>
+				<td>2019/10/05</td>
+			</tr>
+			<tr>
+				<td>Problema, kuri yra identifikuojama dėl nuolat pasikartojančių ar neaiškaus sprendimo IT incidentų.</td>
+				<td>13:50</td>
+				<td>2019/10/22</td>
+			</tr>
+		</table>
+	</div>
+	<div id="list-block">
+		<div>Related documents</div>
+		<ol>
+			<li>IT incidentų valdymo procesas</li>
+			<li>Keitimų valdymo procesas</li>
+			<li>Konfigūracinių vienetų valdymo procesas</li>
+			<li>Paslaugų lygio valdymo procesas</li>
+			<li>Problemų valdymo procesas</li>
+			<li>Žinių valdymo procesas</li>
+		</ol>
+	</div>
+</div>
+
+</div>
+
+<hr />
+<footer>
+	2019 &copy; SVS
+</footer>
+	
+	<script type="text/javascript" src="assets/javascripts/options.js"></script>
+	
+</body>
+</html>

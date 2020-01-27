@@ -1,0 +1,47 @@
+#main-box h2,#main-box h4{
+	text-align: left;
+	padding-left: 20px;
+}
+#main-box > div{
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+}
+.job-msg{
+	background-color: #f0f0f0;
+	max-width: 600px;
+	padding: 5px;
+	margin: 5px 0;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	text-align: left;
+}
+.job-msg-title, .job-msg-info{
+	width: 150px;
+	padding: 0 5px;
+}
+.job-msg-title{
+	border-right: 1px solid #aaa;
+}
+.job-msg-des{
+	min-width: 150px;
+	flex: 1;
+}
+.job-msg-des fieldset{
+	height: 100px;
+	border: 1px solid #aaa;
+}
+.job-msg-des fieldset div{
+	overflow: hidden;
+	overflow-y: auto;
+	height: 90px;
+}
+.job-msg-des fieldset legend{
+	color: #939393;
+	font-style: italic;
+}
+.job-msg > div{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}

@@ -1,0 +1,29 @@
+#gallery-image{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#gallery-image figure{
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin: 10px;
+	width: 100%;
+	min-width: 280px;
+	flex: 1;
+}
+#gallery-image img{
+	width: inherit;
+	border-radius: inherit;
+}
+#gallery-image figcaption{
+	font-style: italic;
+}
+
+@media screen and (max-width: 340px){
+	#gallery-image figure{
+		min-width: 0;
+	}
+	#gallery-image{
+		flex-flow: column nowrap;
+	}
+}

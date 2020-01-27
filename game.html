@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVS</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" media="screen" href="assets/stylesheets/contacts.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/gallery.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/header.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/login.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/main.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/menu.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/newjob.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/page.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/rightside.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/options.css" />
+<link rel="stylesheet" media="screen" href="assets/stylesheets/game.css" />
+<script type="text/javascript" src="assets/javascripts/application.js"></script>
+</head>
+<body>
+<header onmouseleave="out_menu(0)">
+	<div class="logo noselect">
+		<h1>SVS</h1>
+		<h2>System</h2>
+	</div>
+	
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(2)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id1" />
+			<div>
+				Jurij Takun
+				<img src="assets/images/user.png" alt="user" height="16px" width="16px">
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a href="options.html">
+						<img src="assets/images/gear.png" alt="logout" height="16px" width="16px">
+						Options
+					</a>
+					<a href="index.html">
+						<img src="assets/images/logout.png" alt="logout" height="16px" width="16px">
+						Log out
+					</a>
+				</div>
+			</div>
+		</label>
+	</div>
+
+	<div class="log-info" onmouseover="this.getElementsByTagName('div')[1].style.minWidth = (this.offsetWidth-12) + 'px';" onclick="out_menu(1)">
+		<label>
+			<input type="checkbox" class="dropdownbox" id="checkbox_id2" />
+			<div>
+				Language 
+				(EN)
+				<img src="assets/images/drop.png" alt="drop" height="8px" width="8px">
+				<div class="dropdownbox-table">
+					<a onclick="location.reload();">
+						Lietuvių (LT)
+					</a><br>
+					<a onclick="location.reload();">
+						English (EN)
+					</a><br>
+				</div>
+			</div>
+		</label>
+	</div>
+</header>
+
+
+<div id="page">
+
+<div id="menu" class="menu0">
+	<ul>
+		<a href="main.html">
+			<li disabled="false">
+				<div class="noselect">Home</div>
+			</li>
+		</a>
+		<a href="new-job.html">
+			<li disabled="false">
+				<div class="noselect">New Job</div>
+			</li>
+		</a>
+		<a href="gallery.html">
+			<li disabled="false">
+				<div class="noselect">Gallery</div>
+			</li>
+		</a>
+		<a href="contacts.html">
+			<li disabled="false">
+				<div class="noselect">Contacts</div>
+			</li>
+		</a>
+		<a href="schema.html">
+			<li disabled="false">
+				<div class="noselect">Schema</div>
+			</li>
+		</a>
+		<a href="game.html">
+			<li disabled="true">
+				<div class="noselect">Game</div>
+			</li>
+		</a>
+	</ul>
+</div>
+
+<div id="content">
+
+<div id="main-box">
+	<h2>Game</h2>
+	<div class="game-box">
+		<h3>Multiplication table training</h3>
+		<div>
+			Rules:<br>
+			Enter your answer and press the "Enter" button on the keyboard.
+		</div>
+		<hr>
+		<div class="game-play">
+			<div class="game-block">
+				<span id="game-condition-id">1 &times; 1 = </span>
+				<input id="game-answer-id" type="text" placeholder="" maxlength="3"
+					   onpaste="event.preventDefault()"
+					   onkeypress="AnswerNumEnter(event, this)" />
+			</div>
+			<div id="problems-block" class="game-info">
+				<h3>Info</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Your Answer</th>
+							<th>Actual Answer</th>
+						</tr>
+					</thead>
+					<tbody id="game-info-box-id">
+					</tbody>
+				</table>
+				<div>
+					<h3>Status</h3>
+					<ul>
+						<li>OK - <span id="game-info-ok-id">0</span></li>
+						<li>Fail - <span id="game-info-fail-id">0</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+</div>
+
+<hr />
+<footer>
+	2019 &copy; SVS
+</footer>
+	
+	<script rel="stylesheet" type="text/javascript" src="assets/javascripts/options.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="assets/javascripts/game.js"></script>
+	
+</body>
+</html>

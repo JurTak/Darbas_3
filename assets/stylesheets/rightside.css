@@ -1,0 +1,43 @@
+#problems-block{
+	text-align: left;
+	background-color: #f0f0f0;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+#problems-block h3{
+	margin: 5px;
+}
+table{
+	background-color: #aaa;
+	border-spacing: 1px;
+}
+table tr{
+	background-color: #f0f0f0;
+	padding: 3px;
+}
+table th{
+	color: #000;
+	background-color: #ccc;
+	padding: inherit;
+}
+table td{
+	background-color: white;
+	vertical-align: top;
+	padding: inherit;
+}
+
+#list-block{
+	background-color: #f0f0f0;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+@media screen and (max-width: 340px){
+	table td,table th{
+		font-size: 5vw;
+	}
+}
